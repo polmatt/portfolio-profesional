@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram, MessageCircle } from "lucide-react"
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -50,11 +50,21 @@ export function Contact() {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Mail className="h-5 w-5 text-blue-400 mr-4" />
-                  <span className="text-gray-300">pablomcortes1990@gmail.com</span>
+                  <a 
+                    href="mailto:pablomcortes1990@gmail.com?subject=Contacto desde Portfolio&body=Hola Pablo, me interesa conocer más sobre tus servicios."
+                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                  >
+                    pablomcortes1990@gmail.com
+                  </a>
                 </div>
                 <div className="flex items-center">
                   <Phone className="h-5 w-5 text-blue-400 mr-4" />
-                  <span className="text-gray-300">+54 11 5753-3822</span>
+                  <a 
+                    href="tel:+5491157533822"
+                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                  >
+                    +54 11 5753-3822
+                  </a>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="h-5 w-5 text-blue-400 mr-4" />
@@ -64,16 +74,39 @@ export function Contact() {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Sígueme</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Seguime</h3>
               <div className="flex space-x-4">
-                <a href="#" className="bg-slate-700 p-3 rounded-lg hover:bg-slate-600 transition-colors">
-                  <Github className="h-6 w-6 text-gray-300" />
+                <a 
+                  href="https://github.com/polmatt" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-slate-700 p-3 rounded-lg hover:bg-gray-600 transition-colors group"
+                >
+                  <Github className="h-6 w-6 text-gray-300 group-hover:text-white" />
                 </a>
-                <a href="#" className="bg-slate-700 p-3 rounded-lg hover:bg-slate-600 transition-colors">
-                  <Linkedin className="h-6 w-6 text-gray-300" />
+                <a 
+                  href="http://www.linkedin.com/in/pablo-cortes-dev" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-slate-700 p-3 rounded-lg hover:bg-blue-600 transition-colors group"
+                >
+                  <Linkedin className="h-6 w-6 text-gray-300 group-hover:text-white" />
                 </a>
-                <a href="#" className="bg-slate-700 p-3 rounded-lg hover:bg-slate-600 transition-colors">
-                  <Instagram className="h-6 w-6 text-gray-300" />
+                <a 
+                  href="https://www.instagram.com/pabloo.cortes/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-slate-700 p-3 rounded-lg hover:bg-purple-600 transition-colors group"
+                >
+                  <Instagram className="h-6 w-6 text-gray-300 group-hover:text-white" />
+                </a>
+                <a 
+                  href="https://wa.me/5491157533822?text=Hola%20Pablo!%20Vi%20tu%20portfolio%20y%20me%20gustaria%20hablar%20sobre%20un%20proyecto" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-slate-700 p-3 rounded-lg hover:bg-green-600 transition-colors group"
+                >
+                  <MessageCircle className="h-6 w-6 text-gray-300 group-hover:text-white" />
                 </a>
               </div>
             </div>

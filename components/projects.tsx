@@ -56,7 +56,7 @@ export function Projects() {
       description:
         "Sistema de gestión empresarial para Investor (USA). Desarrollo de interfaces complejas para manejo de datos financieros y reportes en tiempo real.",
       image: "https://i.imgur.com/i7sEgMM.png",
-      technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "GSAP"],
+      technologies: ["Angular", "C#", "TypeScript", "Tailwind CSS", "Ignite"],
       liveUrl: "#",
       githubUrl: "#",
       features: [
@@ -72,7 +72,7 @@ export function Projects() {
       description:
         "Sistema de gestión para Allianz (Argentina). Desarrollo de un back office para manejo de datos de clientes, productores y pólizas de seguros.",
       image: "https://i.imgur.com/a7Ze6IQ.png",
-      technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "GSAP"],
+      technologies: ["Angular", "Java", "TypeScript", "Tailwind CSS"],
       liveUrl: "#",
       githubUrl: "#",
       features: [
@@ -169,17 +169,19 @@ export function Projects() {
                       </a>
                     </Button>
                   )}
-                  <Button
-                    asChild
-                    size="sm"
-                    variant="outline"
-                    className="border-gray-600 text-gray-300 hover:bg-gray-800"
-                  >
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="h-4 w-4 mr-2" />
-                      Código
-                    </a>
-                  </Button>
+                  {!project.isPrivate && (
+                    <Button
+                      asChild
+                      size="sm"
+                      variant="outline"
+                      className="border-gray-600 text-gray-300 hover:bg-gray-800"
+                    >
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="h-4 w-4 mr-2" />
+                        Código
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>
