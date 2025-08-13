@@ -27,21 +27,28 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-slate-900/95 backdrop-blur-sm border-b border-slate-700" : "bg-transparent"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-slate-900/95 backdrop-blur-sm border-b border-slate-700" : "bg-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <a 
-            href="#" 
-            className="text-2xl font-bold text-white hover:opacity-80 transition-opacity duration-200 cursor-pointer"
+          <a
+            href="#"
+            className="flex items-center gap-3 text-2xl font-bold text-white hover:opacity-80 transition-opacity duration-200 cursor-pointer"
             onClick={(e) => {
               e.preventDefault()
               window.scrollTo({ top: 0, behavior: 'smooth' })
             }}
           >
-            Pablo<span className="text-blue-400">Cortés</span>
+            <img
+              src="/icono-website.png"
+              alt="Avatar"
+              className="w-10 h-10 rounded-full border-2 border-blue-400 shadow"
+              style={{ objectFit: "cover" }}
+            />
+            <span>
+              Pablo<span className="text-blue-400">Cortés</span>
+            </span>
           </a>
 
           {/* Desktop Navigation */}

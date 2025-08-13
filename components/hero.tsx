@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { Button } from "@/components/ui/button"
-import { Instagram, Linkedin, Mail, ArrowDown, Github } from "lucide-react"
+import { Instagram, Linkedin, Mail, ArrowDown, Github, MessageCircle } from "lucide-react"
 
 export function Hero() {
   const heroRef = useRef<HTMLDivElement>(null)
@@ -141,13 +141,17 @@ export function Hero() {
         <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
           <Button
             size="lg"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 hover:scale-105 transition-transform"
+            className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-3 hover:scale-105 transition-transform"
             asChild
           >
-            <a href="mailto:pablomcortes1990@gmail.com?subject=Contacto desde Portfolio&body=Hola Pablo, me interesa conocer más sobre tus servicios.">
-              <Mail className="mr-2 h-5 w-5" />
-              Contactar
-            </a>
+            <a 
+                  href="https://wa.me/5491157533822?text=Hola%20Pablo!%20Vi%20tu%20portfolio%20y%20me%20gustaria%20hablar%20sobre%20un%20proyecto" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircle className="h-6 w-6 text-gray-300 group-hover:text-white" />
+                  Contactar
+                </a>
           </Button>
           <Button
             size="lg"
